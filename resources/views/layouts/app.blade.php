@@ -48,10 +48,11 @@
             background-color: #001211;
         }
     </style>
+    @yield('style')
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark marcoPolo-color fixed-top scrolling-navbar">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{ route('welcome') }}">
         <img src="{{ URL::asset('assets/images/logo.jpeg') }}" alt="Marco Polo" class="img-fluid rounded-circle" width="40">
     </a>
     <span class="text-center text-warning navbar-text d-block d-md-none">
@@ -64,132 +65,30 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav d-flex flex-fill">
             <li class="nav-item active flex-fill">
-                <a class="nav-link" href="#"><i class="fa fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ route('welcome') }}"><i class="fa fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
             </li>
             <!-- Dropdown -->
             <li class="nav-item dropdown flex-fill">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-bag"></i> Promotions</a>
-                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Night Club</a>
-                    <a class="dropdown-item" href="#">Artistes</a>
+                <div class="dropdown-menu dropdown-primary bg-warning" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="{{ route('promotions.discJockeys') }}">Disc jockeys</a>
+                    <a class="dropdown-item" href="{{ route('promotions.artistes') }}">Artistes</a>
                     <a class="dropdown-item" href="#">Boissons</a>
                 </div>
             </li>
             <li class="nav-item flex-fill">
-                <a class="nav-link" href="#"><i class="fa fa-music"></i> Miami 228</a>
+                <a class="nav-link" href="{{ route('miami228') }}"><i class="fa fa-music"></i> Miami 228</a>
+            </li>
+            <li class="nav-item flex-fill">
+                <a class="nav-link" href="{{ route('galerie') }}"><i class="fa fa-photo"></i> Galerie</a>
             </li>
         </ul>
     </div>
 </nav>
-<section class=" d-none d-md-block">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="mt-5"></div>
-            <div class="smHide">
-                <center>
-                    <!--Carousel Wrapper-->
-                    <div id="carousel-example-2" class="carousel slide carousel-fade mt-1" data-ride="carousel">
-                        <!--Indicators-->
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="2"></li>
-                        </ol>
-                        <!--/.Indicators-->
-                        <!--Slides-->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <div class="view">
-                                    <img src="{{ URL::asset('assets/images/marco.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
-                                    <div class="mask rgba-black-light"></div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <!--Mask color-->
-                                <div class="view">
-                                    <img src="{{ URL::asset('assets/images/marco1.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
-                                    <div class="mask rgba-black-light"></div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <!--Mask color-->
-                                <div class="view">
-                                    <img src="{{ URL::asset('assets/images/marco2.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
-                                    <div class="mask rgba-black-light"></div>
-                                </div>
-                                {{--<div class="carousel-caption">
-                                    <h3 class="h3-responsive">Slight mask</h3>
-                                    <p>Third text</p>
-                                </div>--}}
-                            </div>
-                        </div>
-                        <!--/.Slides-->
-                    </div>
-                    <!--/.Carousel Wrapper-->
-                </center>
-                <p class="text-center p-2 text-white mt-3">
-                    Je suis Marco Polo, promoteur, manager et gérant. Actuellement gérant à miami 228.
-                </p>
-            </div>
-            <div class="py-4 body">
-                @yield('content')
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="d-block d-md-none">
-    <div class="container-fluid">
-        <div class="row">
-            <!--Carousel Wrapper-->
-            <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="view">
-                            <img src="{{ URL::asset('assets/images/marco.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
-                            <div class="mask rgba-black-light"></div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <!--Mask color-->
-                        <div class="view">
-                            <img src="{{ URL::asset('assets/images/marco1.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
-                            <div class="mask rgba-black-light"></div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <!--Mask color-->
-                        <div class="view">
-                            <img src="{{ URL::asset('assets/images/marco2.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
-                            <div class="mask rgba-black-light"></div>
-                        </div>
-                        {{--<div class="carousel-caption">
-                            <h3 class="h3-responsive">Slight mask</h3>
-                            <p>Third text</p>
-                        </div>--}}
-                    </div>
-                </div>
-                <!--/.Slides-->
-            </div>
-            <!--/.Carousel Wrapper-->
-            <p class="text-center text-white p-2 mt-3 mt-auto" style="background-color: #001211">
-                Je suis Marco Polo, promoteur, manager et gérant. Actuellement gérant à miami 228.
-            </p>
-        </div>
-        <div class="py-4 mt-0">
-            @yield('content')
-        </div>
-    </div>
-</section>
+@yield('content')
+
 
 
 <script src="{{ URL::asset('../node_modules/jquery/dist/jquery.js') }}"></script>

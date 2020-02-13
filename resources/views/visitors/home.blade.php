@@ -1,100 +1,115 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container text-white text-justify" style="background-color: #001211">
-        <div class="d-inline-flex">
-            <p class="bg-warning text-white px-5 py-2 "><i class="fa fa-info-circle"></i> Actualités</p>
-        </div>
-        <div class="row mb-3 uk-child-width-1-2@m uk-grid-match">
-            <div class="col-12 col-md-6" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-                <!-- Card -->
-                <div class="card">
-                    <!-- Card image -->
-                    <img class="card-img-top" src="{{ URL::asset('assets/images/4.jpg') }}" alt="Card image cap">
-                </div>
-                <!-- Card -->
-                <div class="card-body text-justify">
-
-                    <!-- Title -->
-                    <h4 class="card-title text-white h3-responsive"><a>La nuit des amoureux</a></h4>
-                    <!-- Text -->
-                    <p class="card-text">
-                        <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br>
-                        <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br>
-                        <span><i class="fa fa-tshirt"></i> Dress code : Rouge et blanc</span><br>
+    <section class=" d-none d-md-block">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="mt-5"></div>
+                <div class="smHide">
+                    <center>
+                        <!--Carousel Wrapper-->
+                        <div id="carousel-example-2" class="carousel slide carousel-fade mt-1" data-ride="carousel">
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="view">
+                                        <img src="{{ URL::asset('assets/images/marco.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
+                                        <div class="mask rgba-black-light"></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <!--Mask color-->
+                                    <div class="view">
+                                        <img src="{{ URL::asset('assets/images/marco1.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
+                                        <div class="mask rgba-black-light"></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <!--Mask color-->
+                                    <div class="view">
+                                        <img src="{{ URL::asset('assets/images/marco2.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
+                                        <div class="mask rgba-black-light"></div>
+                                    </div>
+                                    {{--<div class="carousel-caption">
+                                        <h3 class="h3-responsive">Slight mask</h3>
+                                        <p>Third text</p>
+                                    </div>--}}
+                                </div>
+                            </div>
+                            <!--/.Slides-->
+                        </div>
+                        <!--/.Carousel Wrapper-->
+                    </center>
+                    <p class="text-center p-2 text-white mt-3">
+                        Je suis Marco Polo, promoteur, manager et gérant. Actuellement gérant à miami 228.
                     </p>
-                    <a href="#" class="btn btn-warning text-uppercase"> Voir plus >></a>
                 </div>
-            </div>
-            <div class="col-12 col-md-6" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-                <!-- Card -->
-                <div class="card">
-                    <!-- Card image -->
-                    <img class="card-img-top" src="{{ URL::asset('assets/images/3.jpg') }}" alt="Card image cap">
+                <div class="pt-4 body">
+                    @include('included.welcome')
+                    @include('included.footer')
                 </div>
-                <!-- Card -->
-                <div class="card-body">
 
-                    <!-- Title -->
-                    <h4 class="card-title text-justify text-white h3-responsive"><a>La nuit blanche</a></h4>
-                    <!-- Text -->
-                    <p class="card-text">
-                        <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br>
-                        <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br>
-                        <span><i class="fa fa-tshirt"></i> Dress code : Blanc</span><br>
-                    </p>
-                    <a href="#" class="btn btn-warning text-uppercase"> Voir plus >></a>
-                </div>
             </div>
         </div>
-        <div class="row mb-3">
-            <div class="col-12">
-                <!-- Card -->
-                <div class="card">
-                    <!-- Card image -->
-                    <img class="card-img-top" src="{{ URL::asset('assets/images/0.jpg') }}" alt="Card image cap">
+    </section>
+
+    <section class="d-block d-md-none">
+        <div class="container-fluid">
+            <div class="row">
+                <!--Carousel Wrapper-->
+                <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="view">
+                                <img src="{{ URL::asset('assets/images/marco.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
+                                <div class="mask rgba-black-light"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                                <img src="{{ URL::asset('assets/images/marco1.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
+                                <div class="mask rgba-black-light"></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                                <img src="{{ URL::asset('assets/images/marco2.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
+                                <div class="mask rgba-black-light"></div>
+                            </div>
+                            {{--<div class="carousel-caption">
+                                <h3 class="h3-responsive">Slight mask</h3>
+                                <p>Third text</p>
+                            </div>--}}
+                        </div>
+                    </div>
+                    <!--/.Slides-->
                 </div>
-                <!-- Card -->
-                <p class="text-justify py-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, eaque labore libero magni minus modi porro quisquam ratione similique! Dignissimos in incidunt magni modi molestiae nostrum recusandae sed veniam!
+                <!--/.Carousel Wrapper-->
+                <p class="text-center text-white p-2 mt-3 mt-auto" style="background-color: #001211">
+                    Je suis Marco Polo, promoteur, manager et gérant. Actuellement gérant à miami 228.
                 </p>
             </div>
-        </div>
-        <div class="row mb-3" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 800">
-            <div class="col-6">
-                <!-- Card -->
-                <div class="card">
-                    <!-- Card image -->
-                    <img class="card-img-top" src="{{ URL::asset('assets/images/4.jpg') }}" alt="Card image cap">
-                </div>
-                <!-- Card -->
-            </div>
-            <div class="col-6">
-                <!-- Card -->
-                <div class="card">
-                    <!-- Card image -->
-                    <img class="card-img-top" src="{{ URL::asset('assets/images/3.jpg') }}" alt="Card image cap">
-                </div>
-                <!-- Card -->
+            <div class="py-4 mt-0">
+                @include('included.welcome')
             </div>
         </div>
-        <div class="row mb-3" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 800">
-            <div class="col-6">
-                <!-- Card -->
-                <div class="card">
-                    <!-- Card image -->
-                    <img class="card-img-top" src="{{ URL::asset('assets/images/2.jpg') }}" alt="Card image cap">
-                </div>
-                <!-- Card -->
-            </div>
-            <div class="col-6">
-                <!-- Card -->
-                <div class="card">
-                    <!-- Card image -->
-                    <img class="card-img-top" src="{{ URL::asset('assets/images/0.jpg') }}" alt="Card image cap">
-                </div>
-                <!-- Card -->
-            </div>
-        </div>
-    </div>
+        @include('included.footer')
+    </section>
 @endsection
