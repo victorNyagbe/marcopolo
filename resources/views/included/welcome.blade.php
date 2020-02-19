@@ -16,11 +16,11 @@
                 <h4 class="card-title text-white h3-responsive"><a>La nuit des amoureux</a></h4>
                 <!-- Text -->
                 <p class="card-text">
-                    <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br>
-                    <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br>
+                    <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br><br>
+                    <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br><br>
                     <span><i class="fa fa-tshirt"></i> Dress code : Rouge et blanc</span><br>
                 </p>
-                <a href="#" class="btn btn-warning text-uppercase"> Voir plus >></a>
+                <a href="https://wa.me/22891019245" class="btn btn-warning text-uppercase"> Reserver</a>
             </div>
         </div>
         <div class="col-12 col-md-6" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 400; repeat: true">
@@ -36,11 +36,11 @@
                 <h4 class="card-title text-justify text-white h3-responsive"><a>La nuit blanche</a></h4>
                 <!-- Text -->
                 <p class="card-text">
-                    <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br>
-                    <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br>
+                    <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br><br>
+                    <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br><br>
                     <span><i class="fa fa-tshirt"></i> Dress code : Blanc</span><br>
                 </p>
-                <a href="#" class="btn btn-warning text-uppercase"> Voir plus >></a>
+                <a href="https://wa.me/22891019245" class="btn btn-warning text-uppercase"> Reserver</a>
             </div>
         </div>
     </div>

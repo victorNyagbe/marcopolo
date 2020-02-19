@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ URL::asset('../node_modules/@fortawesome/fontawesome-free/css/solid.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('../node_modules/@fortawesome/fontawesome-free/css/svg-with-js.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('../node_modules/@fortawesome/fontawesome-free/css/v4-shims.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('icofont/icofont.css') }}">
     <style>
         .marcoPolo-color {
             background-color: #001122;
@@ -72,9 +73,9 @@
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-bag"></i> Promotions</a>
                 <div class="dropdown-menu dropdown-primary bg-warning" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="{{ route('promotions.discJockeys') }}">Disc jockeys</a>
-                    <a class="dropdown-item" href="{{ route('promotions.artistes') }}">Artistes</a>
-                    <a class="dropdown-item" href="#">Boissons</a>
+                    <a class="dropdown-item" href="{{ route('promotions.discJockeys') }}"> DJ</a>
+                    <a class="dropdown-item" href="{{ route('promotions.artistes') }}"> Artistes</a>
+                    <a class="dropdown-item" href="{{ route('promotions.boissons') }}"> Boissons</a>
                 </div>
             </li>
             <li class="nav-item flex-fill">

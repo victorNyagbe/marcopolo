@@ -23,6 +23,10 @@ Route::get('promotions/djs', function () {
     return view('visitors.discJockeys');
 })->name('promotions.discJockeys');
 
+Route::get('promotions/boissons', function () {
+    return view('visitors.boisson');
+})->name('promotions.boissons');
+
 Route::get('miami228', function () {
     return view('visitors.miami');
 })->name('miami228');

@@ -34,10 +34,36 @@
             </nav>
         </div>
     </div>
-    <div class="cover mb-3"></div>
+
+    <div class="container-fluid">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 7:3; animation: fade; autoplay: true; autoplay-interval: 6000;">
+
+                    <ul class="uk-slideshow-items">
+                        <li>
+                            <img src="{{ URL::asset('assets/images/4.jpg') }}" alt="" >
+                        </li>
+                        <li>
+                            <img src="{{ URL::asset('assets/images/2.jpg') }}" alt="" >
+                        </li>
+                        <li>
+                            <img src="{{ URL::asset('assets/images/3.jpg') }}" alt="" >
+                        </li>
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <div class="container Comfortaa mb-3" style="background-color: #001211;">
         <div class="row presentation">
-            <p class="text-white text-justify">
+            <p class="text-white text-justify px-4 px-md-0">
                 Miami 228, le night Club le plus branché de la capitale. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolor dolorem, doloremque dolorum excepturi expedita, impedit incidunt iste itaque laboriosam placeat qui quod sint ullam voluptatibus. Est libero optio veritatis.
                 Il est ouvert chaque soir à partir de 22h00 à l'aube.
             </p>
@@ -46,7 +72,7 @@
             <p class="bg-warning text-white px-5 py-2 ">Evénements</p>
         </div>
        <div class="row events">
-           <div class="col">
+           <div class="col-12 col-md-6">
                <div class="card">
                    <!-- Card image -->
                    <img class="card-img-top" src="{{ URL::asset('assets/images/4.jpg') }}" alt="Card image cap">
@@ -58,14 +84,14 @@
                    <h4 class="card-title text-white h3-responsive"><a>La nuit des amoureux</a></h4>
                    <!-- Text -->
                    <p class="card-text text-white">
-                       <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br>
-                       <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br>
+                       <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br><br>
+                       <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br><br>
                        <span><i class="fa fa-tshirt"></i> Dress code : Rouge et blanc</span><br>
                    </p>
-                   <a href="#" class="btn btn-warning text-uppercase btn-block"> Reserver</a>
+                   <a href="https://wa.me/22891019245" class="btn btn-warning text-uppercase btn-block reserver"> Reserver</a>
                </div>
            </div>
-           <div class="col">
+           <div class="col-12 col-md-6">
                <div class="card">
                    <!-- Card image -->
                    <img class="card-img-top" src="{{ URL::asset('assets/images/4.jpg') }}" alt="Card image cap">
@@ -77,11 +103,11 @@
                    <h4 class="card-title text-white h3-responsive"><a>La nuit des amoureux</a></h4>
                    <!-- Text -->
                    <p class="card-text text-white">
-                       <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br>
-                       <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br>
+                       <span><i class="fa fa-calendar"></i> Date : 14 Février 2020</span><br><br>
+                       <span><i class="fa fa-clock"></i> Heure : 20:00 - 22:00</span><br><br>
                        <span><i class="fa fa-tshirt"></i> Dress code : Rouge et blanc</span><br>
                    </p>
-                   <a href="#" class="btn btn-warning text-uppercase btn-block"> Reserver</a>
+                   <a href="https://wa.me/22891019245" class="btn btn-warning text-uppercase reserver btn-block"> Reserver</a>
                </div>
            </div>
        </div>
