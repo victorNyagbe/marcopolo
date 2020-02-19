@@ -95,5 +95,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="deblaa" />
+    <orderEntry type="module" module-name="schoolManager" />
   </component>
 </module>
