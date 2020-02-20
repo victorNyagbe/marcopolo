@@ -57,6 +57,28 @@
 
             </div>
         </div>
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"  uk-slideshow="ratio: 10:7; animation: pull; autoplay: true; autoplay-interval: 5000;">
+
+                    <ul class="uk-slideshow-items uk-grid ">
+                        <li>
+                            <img src="{{ URL::asset('assets/images/4.jpg') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ URL::asset('assets/images/3.jpg') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ URL::asset('assets/images/2.jpg') }}" alt="">
+                        </li>
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+                </div>
+            </div>
+        </div>
     </div>
     @include('included.footer')
 @endsection

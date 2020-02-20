@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="row justify-content-center" style="padding-top: 6rem;">
-            <p class="bg-light text-dark px-5 py-2 text-center"><i class="icofont-water-drop"></i> Eau</p>
+            <p class="bg-light text-dark px-5 py-2 text-center"><i class="text-white icofont-water-drop"></i> Eau</p>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" style="padding-top: 1rem;">
             <div class="col mb-4">

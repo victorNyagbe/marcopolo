@@ -11,26 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('visitors.home');
-})->name('welcome');
+/* Administrator */
 
-Route::get('promotions/artistes', function () {
-    return view('visitors.artiste');
-})->name('promotions.artistes');
+Route::prefix('admin')->group(function() {
 
-Route::get('promotions/djs', function () {
-    return view('visitors.discJockeys');
-})->name('promotions.discJockeys');
+    Route::get('/', 'Admin\AdministratorController@welcome')->name('admin.welcome');
 
-Route::get('promotions/boissons', function () {
-    return view('visitors.boisson');
-})->name('promotions.boissons');
+    Route::prefix('home')->group(function () {
+       Route::get('profile', 'Admin\HomeController@profileIndex')->name('home.profile');
+       Route::get('profile/{home}/edit', 'Admin\HomeController@profileEdit')->name('home.profileEdit');
+       Route::patch('profile/{home}', 'Admin\HomeController@profileUpdate')->name('home.profileUpdate');
+    });
+});
 
-Route::get('miami228', function () {
-    return view('visitors.miami');
-})->name('miami228');
 
-Route::get('galerie', function () {
-    return view('visitors.galerie');
-})->name('galerie');
+/* Visitors */
+
+
+Route::get('/', 'Visitors\PagesController@home')->name('welcome');
+
+Route::prefix('promotions')->group(function () {
+
+    Route::get('artistes', 'Visitors\PagesController@artist')->name('promotions.artistes');
+
+    Route::get('djs', 'Visitors\PagesController@dj')->name('promotions.discJockeys');
+
+    Route::get('boissons', 'Visitors\PagesController@boisson')->name('promotions.boissons');
+});
+
+Route::get('miami228', 'Visitors\PagesController@miami')->name('miami228');
+
+Route::get('galerie', 'Visitors\PagesController@galerie')->name('galerie');

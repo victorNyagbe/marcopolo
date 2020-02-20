@@ -18,30 +18,23 @@
                             <!--/.Indicators-->
                             <!--Slides-->
                             <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active">
-                                    <div class="view">
-                                        <img src="{{ URL::asset('assets/images/marco.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
-                                        <div class="mask rgba-black-light"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <!--Mask color-->
-                                    <div class="view">
-                                        <img src="{{ URL::asset('assets/images/marco1.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
-                                        <div class="mask rgba-black-light"></div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <!--Mask color-->
-                                    <div class="view">
-                                        <img src="{{ URL::asset('assets/images/marco2.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
-                                        <div class="mask rgba-black-light"></div>
-                                    </div>
-                                    {{--<div class="carousel-caption">
-                                        <h3 class="h3-responsive">Slight mask</h3>
-                                        <p>Third text</p>
-                                    </div>--}}
-                                </div>
+                                @foreach($profileImage as $profile)
+                                    @if($profile->id == 1)
+                                        <div class="carousel-item active">
+                                            <div class="view">
+                                                <img src="{{ URL::asset('storage/'.$profile->image) }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
+                                                <div class="mask rgba-black-light"></div>
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="carousel-item">
+                                            <div class="view">
+                                                <img src="{{ URL::asset('storage/'.$profile->image) }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
+                                                <div class="mask rgba-black-light"></div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
                             </div>
                             <!--/.Slides-->
                         </div>
@@ -74,30 +67,23 @@
                     <!--/.Indicators-->
                     <!--Slides-->
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="view">
-                                <img src="{{ URL::asset('assets/images/marco.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img src="{{ URL::asset('assets/images/marco1.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img src="{{ URL::asset('assets/images/marco2.jpg') }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="100%">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                            {{--<div class="carousel-caption">
-                                <h3 class="h3-responsive">Slight mask</h3>
-                                <p>Third text</p>
-                            </div>--}}
-                        </div>
+                        @foreach($profileImage as $profile)
+                            @if($profile->id == 1)
+                                <div class="carousel-item active">
+                                    <div class="view">
+                                        <img src="{{ URL::asset('storage/'.$profile->image) }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
+                                        <div class="mask rgba-black-light"></div>
+                                    </div>
+                                </div>
+                            @else
+                                <div class="carousel-item">
+                                    <div class="view">
+                                        <img src="{{ URL::asset('storage/'.$profile->image) }}" alt="Marco Polo Image" class="img-fluid rounded mt-3" width="85%">
+                                        <div class="mask rgba-black-light"></div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
                     <!--/.Slides-->
                 </div>

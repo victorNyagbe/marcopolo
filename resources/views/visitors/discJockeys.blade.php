@@ -39,9 +39,9 @@
                         <!--Text-->
                         <hr>
                         <p class="card-text text-center">
-                            <a href="#"><i class="fa fa-whatsapp text-white fa-2x mx-2"></i></a>
-                            <a href="#"><i class="fa fa-facebook text-white fa-2x mx-2"></i></a>
-                            <a href="#"><i class="fa fa-twitter text-white fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-whatsapp text-success fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-facebook text-primary fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-twitter text-info fa-2x mx-2"></i></a>
                         </p>
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                     </div>
@@ -73,9 +73,9 @@
                         <!--Text-->
                         <hr>
                         <p class="card-text text-center">
-                            <a href="#"><i class="fa fa-whatsapp text-white fa-2x mx-2"></i></a>
-                            <a href="#"><i class="fa fa-facebook text-white fa-2x mx-2"></i></a>
-                            <a href="#"><i class="fa fa-twitter text-white fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-whatsapp text-success fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-facebook text-primary fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-twitter text-info fa-2x mx-2"></i></a>
                         </p>
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                     </div>
@@ -107,9 +107,9 @@
                         <!--Text-->
                         <hr>
                         <p class="card-text text-center">
-                            <a href="#"><i class="fa fa-whatsapp text-white fa-2x mx-2"></i></a>
-                            <a href="#"><i class="fa fa-facebook text-white fa-2x mx-2"></i></a>
-                            <a href="#"><i class="fa fa-twitter text-white fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-whatsapp text-success fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-facebook text-primary fa-2x mx-2"></i></a>
+                            <a href="#"><i class="fa fa-twitter text-info fa-2x mx-2"></i></a>
                         </p>
                         <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                     </div>
