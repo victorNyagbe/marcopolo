@@ -13,7 +13,9 @@ class PagesController extends Controller
      */
      public function home() {
          $profileImage = Home::where('profile', 1)->get();
-         return view('visitors.home', compact('profileImage'));
+         $couvertures = Home::where('home_image', 1)->get();
+         $fades = Home::where('fade', 1)->get();
+         return view('visitors.home', compact('profileImage', 'couvertures', 'fades'));
      }
 
     /**

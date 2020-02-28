@@ -49,7 +49,9 @@
             <!-- Card -->
             <div class="card">
                 <!-- Card image -->
-                <img class="card-img-top" src="{{ URL::asset('assets/images/0.jpg') }}" alt="Card image cap">
+                @foreach($couvertures as $couverture)
+                    <img class="card-img-top" src="{{ URL::asset('storage/'.$couverture->image) }}" alt="Card image cap">
+                @endforeach
             </div>
             <!-- Card -->
             <p class="text-justify py-3">
@@ -58,39 +60,16 @@
         </div>
     </div>
     <div class="row mb-3" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 400;">
-        <div class="col-6">
-            <!-- Card -->
-            <div class="card">
-                <!-- Card image -->
-                <img class="card-img-top" src="{{ URL::asset('assets/images/4.jpg') }}" alt="Card image cap">
+        @foreach($fades as $fade)
+            <div class="col-6 mb-4">
+                <!-- Card -->
+                <div class="card">
+                    <!-- Card image -->
+                    <img class="card-img-top" src="{{ URL::asset('storage/'.$fade->image) }}" alt="Card image cap">
+                </div>
+                <!-- Card -->
             </div>
-            <!-- Card -->
-        </div>
-        <div class="col-6">
-            <!-- Card -->
-            <div class="card">
-                <!-- Card image -->
-                <img class="card-img-top" src="{{ URL::asset('assets/images/3.jpg') }}" alt="Card image cap">
-            </div>
-            <!-- Card -->
-        </div>
-    </div>
-    <div class="row mb-4" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 400;">
-        <div class="col-6">
-            <!-- Card -->
-            <div class="card">
-                <!-- Card image -->
-                <img class="card-img-top" src="{{ URL::asset('assets/images/2.jpg') }}" alt="Card image cap">
-            </div>
-            <!-- Card -->
-        </div>
-        <div class="col-6">
-            <!-- Card -->
-            <div class="card">
-                <!-- Card image -->
-                <img class="card-img-top" src="{{ URL::asset('assets/images/0.jpg') }}" alt="Card image cap">
-            </div>
-            <!-- Card -->
-        </div>
+        @endforeach
+
     </div>
 </div>

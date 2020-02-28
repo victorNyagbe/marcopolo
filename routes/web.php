@@ -17,10 +17,16 @@ Route::prefix('admin')->group(function() {
 
     Route::get('/', 'Admin\AdministratorController@welcome')->name('admin.welcome');
 
-    Route::prefix('home')->group(function () {
+    Route::prefix('accueil')->group(function () {
        Route::get('profile', 'Admin\HomeController@profileIndex')->name('home.profile');
        Route::get('profile/{home}/edit', 'Admin\HomeController@profileEdit')->name('home.profileEdit');
        Route::patch('profile/{home}', 'Admin\HomeController@profileUpdate')->name('home.profileUpdate');
+       Route::get('couverture', 'Admin\HomeController@couvertureIndex')->name('home.couverture');
+       Route::get('couverture/{home}/edit', 'Admin\HomeController@couvertureEdit')->name('home.couvertureEdit');
+       Route::patch('couverture/{home}', 'Admin\HomeController@couvertureUpdate')->name('home.couvertureUpdate');
+       Route::get('image-accueil', 'Admin\HomeController@fadeIndex')->name('home.fade');
+       Route::post('image-accueil', 'Admin\HomeController@fadeStore')->name('home.fadeStore');
+       Route::get('image-accueil/{home}/edit', 'Admin\HomeController@fadeEdit')->name('home.fadeEdit');
     });
 });
 
