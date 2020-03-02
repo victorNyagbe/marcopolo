@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('home')
+@section('miami')
     <div class="content-wrapper">
         <div class="content-header">
             <div class="conainer-fluid">
@@ -29,16 +29,17 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8">
-                        <form action="{{ route('home.fadeUpdate', $home) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('miami.imageUpdate', $miami) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
                             <div class="modal-body">
-                                <input type="file" required name="fade_home" accept=".image/jpeg,.png,.jpg" id="fade_home" class="form-control">
+                                <input type="file" required name="image" accept=".image/jpeg,.png,.jpg" id="image" class="form-control">
                             </div>
                             <div class="float-right mr-5">
-                                <a href="{{ route('home.fade') }}" class="btn btn-default">Annuler</a>
+                                <a href="{{ route('miami.image') }}" class="btn btn-default">Annuler</a>
                                 <button type="submit" class="btn btn-primary apply">Appliquer</button>
                             </div>
+
                         </form>
                     </div>
                 </div>

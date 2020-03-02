@@ -28,8 +28,8 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-dark">
                     <li class="breadcrumb-item text-white">Accueil</li>
-                    <li class="breadcrumb-item text-warning"><a href="#" class="text-decoration-none text-warning">Evénements</a></li>
-                    <li class="breadcrumb-item text-warning active"><a href="#" class="text-decoration-none text-warning">Soirées</a></li>
+                    <li class="breadcrumb-item text-warning"><a href="{{ route('events') }}" class="text-decoration-none text-warning">Evénements</a></li>
+                    <li class="breadcrumb-item text-warning active"><a href="{{ route('parties') }}" class="text-decoration-none text-warning">Soirées</a></li>
                 </ol>
             </nav>
         </div>
@@ -41,15 +41,11 @@
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 7:3; animation: fade; autoplay: true; autoplay-interval: 6000;">
 
                     <ul class="uk-slideshow-items">
-                        <li>
-                            <img src="{{ URL::asset('assets/images/4.jpg') }}" alt="" >
-                        </li>
-                        <li>
-                            <img src="{{ URL::asset('assets/images/2.jpg') }}" alt="" >
-                        </li>
-                        <li>
-                            <img src="{{ URL::asset('assets/images/3.jpg') }}" alt="" >
-                        </li>
+                        @foreach($couvertures as $couverture)
+                            <li>
+                                <img src="{{ URL::asset('storage/'.$couverture->image) }}" alt="couverture_image">
+                            </li>
+                        @endforeach
                     </ul>
 
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
@@ -111,18 +107,25 @@
                </div>
            </div>
        </div>
+        <hr>
+        <div class="row">
+            @foreach($images as $image)
+                <div class="col-6 mb-4">
+                    <img class="card-img-top" src="{{ URL::asset('storage/'.$image->image) }}" alt="image_miami">
+                </div>
+            @endforeach
+        </div>
         <div class="d-inline-flex mt-4">
             <p class="bg-warning text-white px-5 py-2 ">Soirées</p>
         </div>
-        <div class="row events mb-4">
-            <div class="col">
-                <video controls>
-                    <source src="{{ URL::asset('assets/videos/videomi1.mp4') }}" type="video/mp4">
-                </video>
-            </div>
-            <div class="col">
-                <img class="card-img-top" src="{{ URL::asset('assets/images/0.jpg') }}" alt="Card image cap">
-            </div>
+        <div class="row mb-4">
+            @foreach($videos as $video)
+                <div class="col-6">
+                    <video controls width="100%">
+                        <source src="{{ URL::asset('storage/'.$video->video) }}" >
+                    </video>
+                </div>
+            @endforeach
         </div>
         <div class="row">
             <div class="col-12">

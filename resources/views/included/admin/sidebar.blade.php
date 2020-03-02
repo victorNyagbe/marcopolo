@@ -64,6 +64,65 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.drink') }}" class="nav-link">
+                        <i class="nav-icon fas fa-wine-bottle"></i>
+                        <p>Boissons</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.djs') }}" class="nav-link">
+                        <i class="nav-icon fas fa-headphones-alt"></i>
+                        <p>Djs</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.artist') }}" class="nav-link">
+                        <i class="nav-icon fas fa-microphone"></i>
+                        <p>Artistes</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-music"></i>
+                        <p>
+                            Miami
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('miami.couverture') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Couverture</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('miami.image') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Images</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('party.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Soirées</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('event.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-clipboard"></i>
+                        <p>Evénements</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('gallery.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-photo"></i>
+                        <p>Galerie</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

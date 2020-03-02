@@ -8,24 +8,24 @@
 
         @font-face {
             font-family: Comfortaa;
-            src: url("{{ URL::asset('fonts/Comfortaa-VariableFont_wght.ttf') }}");
+            src: url("{{ URL::asset('/fonts/Comfortaa-VariableFont_wght.ttf') }}");
         }
 
     </style>
 @endsection
-
 @section('content')
-    <div class="container Comfortaa" style="background-color: #001211">
-        <div class="row pt-5"></div>
+    <div class="container text-white Comfortaa" style="background-color: #001211;">
         <div class="row pt-5 mb-4">
-            @foreach($galleries as $gallery)
-                <div class="col-6 col-md-3">
-                    <img src="{{ URL::asset('storage/'. $gallery->image) }}" alt="image_galerie" class="w-100">
+            @foreach($videos as $video)
+                <div class="col-6 pt-5">
+                    <video controls width="100%">
+                        <source src="{{ URL::asset('storage/'.$video->video) }}" >
+                    </video>
                 </div>
             @endforeach
         </div>
         <div class="d-flex justify-content-center">
-            {{ $galleries->links() }}
+            {{ $videos->links() }}
         </div>
     </div>
     @include('included.footer')

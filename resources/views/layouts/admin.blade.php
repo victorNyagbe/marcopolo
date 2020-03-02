@@ -31,6 +31,12 @@
     <!-- Section -->
         @yield('welcome')
         @yield('home')
+        @yield('drink')
+        @yield('dj')
+        @yield('artist')
+        @yield('miami')
+        @yield('party')
+        @yield('gallery')
     <!-- /. Section -->
 
     <!-- footer -->
